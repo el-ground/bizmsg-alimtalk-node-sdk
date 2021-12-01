@@ -1,8 +1,9 @@
 {
   "name": "bizmsg-alimtalk-node-sdk",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A module for sending Kakao notifications via Bizmsg API",
   "main": "dist/src/models/index.js",
+  "types": "dist/src/models/index.d.ts",
   "repository": "git@github.com:el-ground/bizmsg-alimtalk-node-sdk.git",
   "author": "<sjeon@elground.com>",
   "license": "MIT",

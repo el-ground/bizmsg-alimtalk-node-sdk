@@ -27,7 +27,14 @@
       "#framework/*": ["src/framework/*"],
       "#routers/*": ["src/routers/*"],
       "#model/*": ["src/model/*"]
-    }
+    },
+    "declaration": true
   },
-  "include": ["src/**/*", "scripts/**/*", "_trashcan/foo.ts", "_trashcan/wrap-fetch.ts", "_trashcan/message-template.ts"]
+  "include": [
+    "src/**/*",
+    "scripts/**/*",
+    "_trashcan/foo.ts",
+    "_trashcan/wrap-fetch.ts",
+    "_trashcan/message-template.ts"
+  ]
 }

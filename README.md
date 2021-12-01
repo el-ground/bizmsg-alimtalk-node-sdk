@@ -1,6 +1,6 @@
 # bizmsg-alimtalk-node-sdk
 
-A module for sending Kakao notifications via Bizmsg API
+A module for sending Kakao notifications via Bizmsg API\
 비즈엠 API를 이용한 알림톡 전송 지원 서비스
 
 # Installing
