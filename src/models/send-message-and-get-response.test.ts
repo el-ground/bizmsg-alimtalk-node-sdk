@@ -18,7 +18,7 @@ describe(`testing sendMessageAndGetResponse with mock results`, () => {
   }
   const invalidKeyValue: KeyValue = { invalidKey: 'value' }
 
-  const messageError: MessageError = { code: '', message: '', class: '' }
+  const messageError: MessageError = { code: '', message: '' }
 
   test(`testing phone number validation when sending message`, async () => {
     try {
@@ -31,7 +31,7 @@ describe(`testing sendMessageAndGetResponse with mock results`, () => {
       expect(true).toBe(false)
     } catch (error) {
       expect(typeof error).toBe(typeof messageError)
-      expect((<MessageError>error).message).toBe('InvalidPhoneNumber')
+      expect((<MessageError>error).message).toBe('E104:InvalidPhoneNumber')
     }
   })
 

@@ -368,9 +368,8 @@ export default (cleanedJSON: CleanedJSON): MessageError => {
   const errorCode: string = `${cleanedJSON.message}`.slice(0, 4)
 
   const messageError: MessageError = {
-    code: errorCode,
-    message: `${cleanedJSON.message}`.slice(5),
-    class: bizmsgErrors[errorCode],
+    code: bizmsgErrors[errorCode],
+    message: cleanedJSON.message,
   }
 
   return messageError

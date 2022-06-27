@@ -35,8 +35,7 @@ declare global {
 
   interface MessageError {
     code: string
-    message: string
-    class: string
+    message?: string
   }
 
   interface ButtonTemplateDict {

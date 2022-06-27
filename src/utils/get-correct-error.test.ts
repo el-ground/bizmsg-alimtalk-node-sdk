@@ -9,9 +9,8 @@ describe(`testing K-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('K101')
-    expect(messageError.message).toBe('NotAvailableSendMessage')
-    expect(messageError.class).toBe('BLOCKED')
+    expect(messageError.code).toBe('BLOCKED')
+    expect(messageError.message).toBe('K101:NotAvailableSendMessage')
   })
 
   test(`K102 FAILED`, () => {
@@ -22,9 +21,8 @@ describe(`testing K-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('K102')
-    expect(messageError.message).toBe('InvalidPhoneNumber')
-    expect(messageError.class).toBe('VALIDATION')
+    expect(messageError.code).toBe('VALIDATION')
+    expect(messageError.message).toBe('K102:InvalidPhoneNumber')
   })
 
   test(`K112 FAILED`, () => {
@@ -35,9 +33,8 @@ describe(`testing K-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('K112')
-    expect(messageError.message).toBe('InvalidUserKeyException')
-    expect(messageError.class).toBe('MANAGEMENT')
+    expect(messageError.code).toBe('MANAGEMENT')
+    expect(messageError.message).toBe('K112:InvalidUserKeyException')
   })
 
   test(`K997 FAILED`, () => {
@@ -48,9 +45,8 @@ describe(`testing K-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('K997')
-    expect(messageError.message).toBe('ResponseTimeoutException')
-    expect(messageError.class).toBe('RETRIABLE')
+    expect(messageError.code).toBe('RETRIABLE')
+    expect(messageError.message).toBe('K997:ResponseTimeoutException')
   })
 })
 
@@ -63,9 +59,8 @@ describe(`testing M-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('M001')
-    expect(messageError.message).toBe('ProcessingMessageSend')
-    expect(messageError.class).toBe('FAILED')
+    expect(messageError.code).toBe('FAILED')
+    expect(messageError.message).toBe('M001:ProcessingMessageSend')
   })
 
   test(`M101 FAILED`, () => {
@@ -76,9 +71,8 @@ describe(`testing M-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('M101')
-    expect(messageError.message).toBe('NotAvailableSendMessage')
-    expect(messageError.class).toBe('RETRIABLE')
+    expect(messageError.code).toBe('RETRIABLE')
+    expect(messageError.message).toBe('M101:NotAvailableSendMessage')
   })
 
   test(`M102 FAILED`, () => {
@@ -89,9 +83,8 @@ describe(`testing M-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('M102')
-    expect(messageError.message).toBe('InvalidPhoneNumber')
-    expect(messageError.class).toBe('VALIDATION')
+    expect(messageError.code).toBe('VALIDATION')
+    expect(messageError.message).toBe('M102:InvalidPhoneNumber')
   })
 
   test(`M103 FAILED`, () => {
@@ -102,9 +95,8 @@ describe(`testing M-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('M103')
-    expect(messageError.message).toBe('DoNotDisturb')
-    expect(messageError.class).toBe('BLOCKED')
+    expect(messageError.code).toBe('BLOCKED')
+    expect(messageError.message).toBe('M103:DoNotDisturb')
   })
 
   test(`M300 FAILED`, () => {
@@ -115,9 +107,8 @@ describe(`testing M-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('M300')
-    expect(messageError.message).toBe('')
-    expect(messageError.class).toBe('MANAGEMENT')
+    expect(messageError.code).toBe('MANAGEMENT')
+    expect(messageError.message).toBe('M300')
   })
 })
 
@@ -130,9 +121,8 @@ describe(`testing E-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('E100')
-    expect(messageError.message).toBe('InvalidJsonArray')
-    expect(messageError.class).toBe('VALIDATION')
+    expect(messageError.code).toBe('VALIDATION')
+    expect(messageError.message).toBe('E100:InvalidJsonArray')
   })
 
   test(`E114 MANAGEMENT`, () => {
@@ -143,9 +133,8 @@ describe(`testing E-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('E114')
-    expect(messageError.message).toBe('DeletedSender')
-    expect(messageError.class).toBe('MANAGEMENT')
+    expect(messageError.code).toBe('MANAGEMENT')
+    expect(messageError.message).toBe('E114:DeletedSender')
   })
 })
 
@@ -158,8 +147,7 @@ describe(`testing R-series errors`, () => {
     }
 
     const messageError: MessageError = getCorrectError(mockCleanedJSON)
-    expect(messageError.code).toBe('R109')
-    expect(messageError.message).toBe('DuplicatedMsgid')
-    expect(messageError.class).toBe('FAILED')
+    expect(messageError.code).toBe('FAILED')
+    expect(messageError.message).toBe('R109:DuplicatedMsgid')
   })
 })
