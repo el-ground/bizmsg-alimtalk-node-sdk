@@ -4,7 +4,7 @@ dotenv.config()
 
 export default async (
   messageBody: string,
-  sendType: sendType,
+  sendType: SendType,
 ): Promise<CleanedJSON> => {
   let serverHost: string = ''
   switch (sendType) {

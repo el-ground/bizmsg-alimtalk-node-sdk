@@ -3,7 +3,7 @@ declare global {
     [key: string]: string
   }
 
-  type sendType = 'default' | 'mock-success' | 'mock-fail' | 'test'
+  type SendType = 'default' | 'mock-success' | 'mock-fail' | 'test'
 
   type BizmsgResponse = any
 

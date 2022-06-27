@@ -12,7 +12,7 @@ export async function sendMessageAndGetResponse({
   phoneNumber: string
   messageTemplate: MessageTemplate
   keyValue: KeyValue
-  sendType: sendType
+  sendType: SendType
 }): Promise<CleanedJSON> {
   // create message body based on template
   const messageBody: string = makeMessageBody(

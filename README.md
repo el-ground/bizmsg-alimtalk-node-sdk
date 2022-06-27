@@ -57,7 +57,7 @@ Requires the following environmental variables: **BIZMSGID**, **BIZMSGPROFILEKEY
 
 **TODO** Update the environmental variables to that of *https://www.bizmsg.kr/*
 
-**TODO** _messageTemplate_ must be pre-registered and authorized at *https://www.bizmsg.kr/*\
+**TODO** _messageTemplate_ must be pre-registered and authorized at *https://www.bizmsg.kr/* \
 If the _messageTemplate_ provided to the method does not exactly match the ones authorized on the site, the method will throw an error.
 
 `sendType: *mock-success*`\
@@ -72,7 +72,7 @@ Requires the following environmental variables: **BIZMSGID**, **BIZMSGPROFILEKEY
 
 **TEST** Update the environmental variables to that of *https://dev-admin.bizmsg.kr/*
 
-**TEST** _messageTemplate_ must be pre-registered and authorized at *https://dev-admin.bizmsg.kr/*\
+**TEST** _messageTemplate_ must be pre-registered and authorized at *https://dev-admin.bizmsg.kr/* \
 If the _messageTemplate_ provided to the method does not exactly match the ones authorized on the site, the method will throw an error.
 
 **TEST** Authorize template at *https://dev-admin.bizmsg.kr/*
