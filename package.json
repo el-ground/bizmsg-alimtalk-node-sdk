@@ -1,6 +1,6 @@
 {
   "name": "bizmsg-alimtalk-node-sdk",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "A module for sending Kakao notifications via Bizmsg API",
   "main": "dist/src/models/index.js",
   "types": "dist/src/models/index.d.ts",
