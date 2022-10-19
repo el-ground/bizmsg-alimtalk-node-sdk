@@ -2,9 +2,15 @@ import getReport from './index'
 import sendMessage from '../send-message/index'
 import makeMessageBody from '../make-message-body'
 
+const testProfileKey = process.env.BIZMSGPROFILEKEY as string
+
 describe(`testing get-report with mocked node-fetch`, () => {
   test(`successive report returns correct CleanedJSON`, async () => {
-    const response: CleanedJSON = await getReport(`messageID`, 'mock-success')
+    const response: CleanedJSON = await getReport(
+      `messageID`,
+      'mock-success',
+      testProfileKey,
+    )
 
     expect(response.code).toBe('success')
     expect(response.msgid).toBe('mockMessageID')
@@ -12,7 +18,11 @@ describe(`testing get-report with mocked node-fetch`, () => {
   })
 
   test(`fail report returns correct CleanedJSON`, async () => {
-    const response: CleanedJSON = await getReport(`messageID`, 'mock-fail')
+    const response: CleanedJSON = await getReport(
+      `messageID`,
+      'mock-fail',
+      testProfileKey,
+    )
 
     expect(response.code).toBe('fail')
     expect(response.msgid).toBe('mockMessageID')
@@ -30,6 +40,7 @@ test(`successive report returns correct CleanedJSON`, async () => {
       tmplId: 'roout_mock',
     },
     { key: 'val' },
+    testProfileKey,
   )
 
   const sendResponse: CleanedJSON = await sendMessage(messagebody, 'test')
@@ -42,6 +53,7 @@ test(`successive report returns correct CleanedJSON`, async () => {
   const reportResponse: CleanedJSON = await getReport(
     sendResponse.msgid as string,
     'test',
+    testProfileKey,
   )
 
   expect(reportResponse.code).toBe('success')

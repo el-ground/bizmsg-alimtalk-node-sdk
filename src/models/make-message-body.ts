@@ -4,6 +4,7 @@ export default (
   phoneNumber: string,
   messageTemplate: MessageTemplate,
   keyValue: KeyValue,
+  profileKey: string,
 ): string => {
   const body = JSON.stringify([
     {
@@ -12,7 +13,7 @@ export default (
       // 사용자 전화번호
       phn: phoneNumber,
       // 발신 프로필키
-      profile: process.env.BIZMSGPROFILEKEY,
+      profile: profileKey,
       // 메시지 예약발송을 위한 시간
       reserveDt: messageTemplate.reserveDt || '',
       // 사용자에게 전달될 메세지
