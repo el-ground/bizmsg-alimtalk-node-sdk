@@ -1,7 +1,7 @@
 export default (templateMessage: string, keyValue: KeyValue): string => {
   let message: string = templateMessage
   const keyInTemplateArray = templateMessage.match(
-    /\#\{(.+)\}/gm,
+    /\#\{([^\}]+)\}/gm,
   ) as Array<string>
 
   if (!keyInTemplateArray) {
