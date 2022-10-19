@@ -5,6 +5,7 @@ dotenv.config()
 export default async (
   messageID: string,
   sendType: SendType,
+  profileKey: string,
 ): Promise<CleanedJSON> => {
   let serverHost: string = ''
   switch (sendType) {
@@ -31,7 +32,7 @@ export default async (
   }
 
   const response = await fetch(
-    `${serverHost}/v2/sender/report?profile=${process.env.BIZMSGPROFILEKEY}&msgid=${messageID}`,
+    `${serverHost}/v2/sender/report?profile=${profileKey}&msgid=${messageID}`,
     {
       method: 'get',
       headers: {

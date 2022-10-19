@@ -8,17 +8,20 @@ export async function sendMessageAndGetResponse({
   messageTemplate,
   keyValue,
   sendType,
+  profileKey,
 }: {
   phoneNumber: string
   messageTemplate: MessageTemplate
   keyValue: KeyValue
   sendType: SendType
+  profileKey: string
 }): Promise<CleanedJSON> {
   // create message body based on template
   const messageBody: string = makeMessageBody(
     phoneNumber,
     messageTemplate,
     keyValue,
+    profileKey,
   )
 
   // send notification message
@@ -41,6 +44,7 @@ export async function sendMessageAndGetResponse({
     getReportResponse = await getReport(
       sendMessageResponse.msgid as string,
       sendType,
+      profileKey,
     )
 
     if (getReportResponse.code == 'success') {

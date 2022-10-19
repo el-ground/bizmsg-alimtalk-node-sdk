@@ -7,13 +7,14 @@ export const sendPhoneMessage = async (
   phoneMessageType: string,
   message: string,
   senderPhoneNumber: string,
+  profileKey: string,
   messageTitle?: string,
 ): Promise<CleanedJSON> => {
   const messageBody: string = JSON.stringify([
     {
       message_type: 'AT',
       phn: phoneNumber,
-      profile: process.env.BIZMSGPROFILEKEY,
+      profile: profileKey,
       msg: '',
       smsKind: phoneMessageType,
       msgSms: message,

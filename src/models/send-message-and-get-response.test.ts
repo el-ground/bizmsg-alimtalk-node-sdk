@@ -1,5 +1,7 @@
 import { sendMessageAndGetResponse } from './send-message-and-get-response'
 
+const testProfileKey = process.env.BIZMSGPROFILEKEY as string
+
 describe(`testing sendMessageAndGetResponse with mock results`, () => {
   const phoneNumber: string = 'phoneNumber'
   const messageTemplate: MessageTemplate = {
@@ -27,6 +29,7 @@ describe(`testing sendMessageAndGetResponse with mock results`, () => {
         messageTemplate: messageTemplate,
         keyValue: keyValue,
         sendType: 'test',
+        profileKey: testProfileKey,
       })
       expect(true).toBe(false)
     } catch (error) {
@@ -42,6 +45,7 @@ describe(`testing sendMessageAndGetResponse with mock results`, () => {
         messageTemplate: invalidMessageTemplate,
         keyValue: keyValue,
         sendType: 'test',
+        profileKey: testProfileKey,
       })
       expect(true).toBe(false)
     } catch (error) {
@@ -56,6 +60,7 @@ describe(`testing sendMessageAndGetResponse with mock results`, () => {
         messageTemplate: messageTemplate,
         keyValue: invalidKeyValue,
         sendType: 'test',
+        profileKey: testProfileKey,
       })
       expect(true).toBe(false)
     } catch (error) {
@@ -70,6 +75,7 @@ describe(`testing sendMessageAndGetResponse with mock results`, () => {
       messageTemplate: messageTemplate,
       keyValue: keyValue,
       sendType: 'mock-success',
+      profileKey: testProfileKey,
     })
 
     expect(response.msgid).toBe('mockMessageID')

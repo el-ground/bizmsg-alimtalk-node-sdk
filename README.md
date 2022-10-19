@@ -53,7 +53,9 @@ sendMessageAndGetResponse({sendType: sendType, phoneNumber: number, messageTempl
 
 `sendType: *default*`\
 Sends a Kakaotalk notification via BizmsgAPI and returns a _CleanedJSON_ containing the message ID of the sent message.\
-Requires the following environmental variables: **BIZMSGID**, **BIZMSGPROFILEKEY**
+Requires the following environmental variables: **BIZMSGID**, 
+
+- biz msg profile key should be supplied via arguments.
 
 **TODO** Update the environmental variables to that of *https://www.bizmsg.kr/*
 
@@ -68,7 +70,7 @@ Mocks a failed notification send request
 
 `sendType: *test*`\
 Used for developmental testing purposes\
-Requires the following environmental variables: **BIZMSGID**, **BIZMSGPROFILEKEY**, **TESTPHONENUM**
+Requires the following environmental variables: **BIZMSGID**, **TESTPHONENUM**
 
 **TEST** Update the environmental variables to that of *https://dev-admin.bizmsg.kr/*
 

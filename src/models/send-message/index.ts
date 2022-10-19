@@ -51,9 +51,11 @@ export default async (
   // code, [SUCCESS]data.msgid?, [FAIL]message?
   const cleanedJSON: CleanedJSON = {
     code: sendMessageResponse.code,
-    msgid: sendMessageResponse.data.msgid as string,
+    msgid: sendMessageResponse.data?.msgid as string,
     message: sendMessageResponse.message as string,
   }
+
+  console.log(JSON.stringify(sendMessageResponseArray, null, 2))
 
   return cleanedJSON
 }
