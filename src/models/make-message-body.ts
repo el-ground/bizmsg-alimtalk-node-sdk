@@ -63,6 +63,7 @@ export default (
       header: messageTemplate.header || '',
       // 아이템리스트형 발송 메시지 정보
       items: messageTemplate.items || {},
+      link: messageTemplate.link || {},
     },
   ])
 

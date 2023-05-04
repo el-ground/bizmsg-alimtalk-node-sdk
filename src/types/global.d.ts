@@ -75,6 +75,17 @@ declare global {
     biz_form_key?: string
   }
 
+  interface LinkTemplate {
+    // PC 환경에서 버튼 클릭 시 이동할 url
+    url_pc?: string
+    // 모바일 환경에서 버튼 클릭 시 이동할 url
+    url_mobile?: string
+    // IOS 환경에서 버튼 클릭 시 실행할 application custom scheme
+    scheme_ios?: string
+    // 안드로이드 환경에서 버튼 클릭 시 실행할 application custom scheme
+    scheme_android?: string
+  }
+
   interface QuickReplyTemplateDict {
     [key: string]: QuickReplyTemplate
   }
@@ -187,6 +198,7 @@ declare global {
     header?: string
     // 아이템리스트형 발송 메시지 정보
     items?: ItemListTemplate
+    link?: LinkTemplate
   }
 }
 
